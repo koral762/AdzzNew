@@ -1,0 +1,13 @@
+//set.up
+@import './set.up.scss/variables';
+@import './set.up.scss/mixins';
+
+//basics
+@import './basics/base';
+
+//comps
+@import './comps/main';
+@import './comps/header';
+@import './comps/articales';
+@import './comps/articales.preview';
+

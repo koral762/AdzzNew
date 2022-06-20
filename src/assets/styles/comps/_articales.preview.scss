@@ -1,0 +1,111 @@
+.articals-rows-container {
+    @include insideMainContainer;
+
+    max-width: 1036px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mobile-layout {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    @include small-tablet-layout {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .artical-header-container {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .artical-paragraph {
+        max-width: 320px;
+        min-height: 128px;
+
+        align-self: flex-start;
+        color: $rticalParagraphText;
+        flex: 1 0 33%;
+        margin-bottom: 28px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 110%;
+
+        @include tablet-layout {
+            max-width: 300px;
+        }
+
+        @include small-tablet-layout {
+            font-size: 13px;
+            max-width: 50%;
+        }
+
+        @include mobile-layout {
+            font-size: 13px;
+            max-width: 500px;
+        }
+
+        .read-or-hide {
+            color: $dotts;
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+
+    .p-header {
+        height: 36px;
+        width: 80%;
+
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 100%;
+
+        color: $articalHeaderAndBorderColor;
+
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+
+        @include mobile-layout {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+    }
+
+    .p-artical {
+        max-width: 320px;
+        height: 75px;
+    }
+
+    .artical-border-bottom {
+        position: relative;
+
+        height: 1px;
+        background-color: $articalHeaderAndBorderColor;
+
+        .arrow-down-btn {
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            left: 93%;
+            top: 0px;
+
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 10px solid $articalHeaderAndBorderColor;
+            outline: 3px solid $bkg;
+            border-radius: 3px;
+
+            cursor: pointer;
+        }
+
+        .arrow-clicked {
+            border-top: 0px solid $articalHeaderAndBorderColor;
+            border-bottom: 10px solid $articalHeaderAndBorderColor;
+            top: -10px;
+        }
+    }
+}
